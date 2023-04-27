@@ -1,0 +1,30 @@
+#card-holder{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.card{
+    outline: 1px solid black;
+}
+
+.card img{
+    max-width: calc(100% - 2em);
+    margin: 1em;
+}
+
+.card p{
+    margin: 0;
+    font-size: 24pt;
+}
+
+.card div{
+    margin: 1em 0;
+}
+
+.card a{
+    background-color: yellow;
+    padding: 0.5em 1em;
+    border-radius: 1000em;
+}
