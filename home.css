@@ -50,6 +50,7 @@ h1, h2{
 .card div{
     margin: 1em auto;
     left: 50%;
+    width: 100%;
     transform: translateX(-50%);
     position: absolute;
     bottom: 0;
@@ -111,7 +112,7 @@ h1, h2{
     height: 2em;
     width: 5em;
     position: absolute;
-    left: -12%;
+    left: 5.5%;
     bottom: -50%;
     box-shadow: 0 0 15px #75cee3;
     rotate: -45deg;
@@ -121,7 +122,7 @@ h1, h2{
     background-color: #fff;
     height: 2em;
     width: 1em;
-    right: -23%;
+    right: -2.5%;
     bottom: 60%;
     box-shadow: 0 0 15px #fff;
 
