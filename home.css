@@ -50,9 +50,9 @@ h1, h2{
 .card div{
     margin: 1em auto;
     left: 50%;
-    width: 100%;
     transform: translateX(-50%);
     position: absolute;
+    width: max-content;
     bottom: 0;
 }
 
@@ -101,6 +101,10 @@ h1, h2{
 
 #ascend cite{
     font-family: Coolvetica, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#ascend > div{
+    padding: 0 40px;
 }
 
 #ascend a:first-of-type{
