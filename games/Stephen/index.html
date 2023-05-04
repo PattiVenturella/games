@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Lucky Guess - Guessing Game</title>
+    <script>
+        function changePage() {
+            location.replace("game.html");
+        }
+        function viewRules() {
+            var x = document.getElementById("rules");
+            x.style.display = "block";
+        }
+        function unviewRules() {
+            var x = document.getElementById("rules");
+            x.style.display = "none";
+        }
+    </script>
+</head>
+<body>
+    <div class="buttons">
+        <h1 class="cool">Lucky Guess</h1>
+        <h2>The World's Hardest Guessing Game</h2>  
+        <button onclick="changePage()" class="homeButton">Start Game</button>
+        <button onclick="viewRules()" class="homeButton">View Rules</button>
+        <button class="homeButton">Options</button>
+        <button onclick="quit()" class="homeButton">Quit Game</button>
+    </div>
+    <div style="display:none;" id="rules">
+        <h3>Welcome to Lucky Guess! Your goal is to guess the correct number. The computer will generate 3 random numbers, each between 1 and 100. These 3 numbers will then be added together and it is your goal to guess the total correctly. You have 15 guesses. If it takes you more than 15 guesses, you lose.</h3>
+        <button onclick="unviewRules()">OK</button>
+    </div>
+</body>
+</html>

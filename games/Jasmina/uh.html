@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            display: none;
+            position: relative;
+        }
+
+        body {
+            background: url("img/output-onlinegiftools.gif");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: scroll;
+            font-size: 25pt;
+        }
+
+        .arrow-up {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 50px solid black;
+        }
+
+        #hide {
+            display: none;
+            border: 5px solid #031d44;
+            background-color: #faf9f4;
+            font-size: 20pt;
+            text-align: center;
+            width: 40%;
+            height: max-content;
+            top: 30%;
+            padding: 5%;
+            position: fixed;
+            left: 25%;
+        }
+
+        #hide p {
+            font-size: 90%;
+        }
+
+        audio {
+            visibility: hidden;
+        }
+
+        .button {
+            border: 3px solid #a8c8ca;
+            width: 20%;
+            border-radius: 0.5em;
+            margin: 0 auto;
+            padding: 1em;
+            transition: all 0.3s ease-in-out;
+            height: max-content;
+            cursor: default;
+        }
+
+
+
+        .button:hover {
+            width: 20%;
+            background-color: #a8c8ca;
+            height: max-content;
+        }
+
+        .button a {
+            transition: all 0.2s ease-in-out;
+            font-weight: 500;
+        }
+
+        .button:hover a {
+            letter-spacing: 0.2em;
+        }
+
+        #scoreboard {
+            border: 5px solid #a8c8ca;
+            width: 35em;
+            margin: auto;
+            padding: 1em;
+        }
+
+        #timer {
+            font-weight: 700;
+            margin-top: 1.2em;
+            margin-right: 10em;
+            margin-left: 2em;
+            font-size: 40pt;
+            color: #e287aa;
+            float: left;
+
+        }
+
+
+        .io {
+            margin-top: 1em;
+        }
+
+        .container {
+            cursor: pointer;
+            margin-left: 1.5em;
+            margin-top: 1.5em;
+        }
+
+        .bar1,
+        .bar2,
+        .bar3 {
+            width: 45px;
+            height: 7px;
+            background-color: #031d44;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+        /* Rotate first bar */
+        .change .bar1 {
+            transform: translate(0, 15px) rotate(-45deg);
+        }
+
+        /* Fade out the second bar */
+        .change .bar2 {
+            opacity: 0;
+        }
+
+        /* Rotate last bar */
+        .change .bar3 {
+            transform: translate(0, -11px) rotate(45deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+
+    <audio src="img/cult.mp3" autoplay></audio>
+    <h1>Test your reaction time!</h1>
+
+
+    <div id="scoreboard">
+
+        <span id="timer">9...</span>
+        <p>Reaction time: <span id="printReactionTime"></span>
+        </p>
+        <p>Score: <span id="score">0</span></p>
+    </div>
+
+    <div id="box">
+        <h1 id="letter"></h1>
+    </div>
+
+    <div id="hide">
+        <p id="winorlose"><span id="cong"></span> You <span id="puthere">are</span> a loser.<br>
+            You scored <span id="10">0</span> points.</p>
+
+        <!-- <div class="button">
+            Restart
+        </div> -->
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="74" height="74" viewBox="0,0,256,256"
+            style="fill:#000000;" onclick="location.reload()">
+            <g fill="#a8c8ca" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                style="mix-blend-mode: normal">
+                <g transform="scale(4,4)">
+                    <path
+                        d="M58,32c0,14.359 -11.641,26 -26,26c-14.359,0 -26,-11.641 -26,-26c0,-14.359 11.641,-26 26,-26c14.359,0 26,11.641 26,26zM45.581,23.785c-1.845,-2.961 -4.678,-5.273 -7.941,-6.478l-1.404,3.746c2.416,0.931 4.501,2.685 5.835,4.888c1.348,2.2 1.873,4.846 1.57,7.394c-0.305,2.544 -1.501,4.95 -3.319,6.747c-1.814,1.799 -4.221,2.973 -6.745,3.261c-2.532,0.311 -5.136,-0.242 -7.295,-1.55c-2.165,-1.297 -3.882,-3.329 -4.769,-5.669c-0.903,-2.326 -0.991,-4.98 -0.245,-7.35c0.48,-1.56 1.321,-3.001 2.415,-4.212l3.145,3.493l2.75,-12.047l-12.281,1.462l3.057,3.395c-1.732,1.844 -3.042,4.08 -3.751,6.511c-1.017,3.433 -0.833,7.176 0.502,10.485c1.318,3.313 3.775,6.125 6.837,7.899c3.059,1.793 6.717,2.5 10.2,2.024c3.501,-0.449 6.815,-2.125 9.27,-4.632c2.466,-2.498 4.068,-5.84 4.438,-9.33c0.376,-3.469 -0.404,-7.08 -2.269,-10.037z">
+                    </path>
+                </g>
+            </g>
+        </svg>
+        &emsp;&nbsp;
+        <img src="img/playyy.png" alt="" width="74" onclick="playThis()">
+        &emsp;
+        <a href="game27.html"><img src="img/home.png" alt="" width="74"></a>
+
+
+
+        <br>
+
+    </div>
+
+
+    <script>
+
+        function myFunction(x) {
+            x.classList.toggle("change");
+            document.getElementById("hide").style.display = "block";
+            clearInterval(counter);
+        }
+        function playThis() {
+            document.getElementById("hide").style.display = "none";
+            counter = setInterval(timer, 1000);
+            count = count - 1;
+            if (count <= 0) {
+                clearInterval(counter);
+                document.getElementById("hide").style.display = "block";
+                if (score >= 10) {
+                    document.getElementById("10").innerHTML = score;
+                    document.getElementById("puthere").innerHTML = "are not";
+                    document.getElementById("cong").innerHTML = "Congrats!"
+                } else if (score < 10) {
+                    document.getElementById("10").innerHTML = score;
+                    document.getElementById("puthere").innerHTML = "are";
+                    document.getElementById("cong").innerHTML = "L<br>";
+                }
+            }
+        }
+        function getRandomColor() {
+
+            var letters = "0123456789ABCDEF".split('');
+            var gletters = "013579ACEF2468".split('');
+            var rletters = "24013579ACEF68".split('');
+            var color = "#";
+            for (var i = 0; i < 2; i++) {
+                color += rletters[Math.round(Math.random() * 5)];
+            } //ends for loop 
+            for (var i = 0; i < 2; i++) {
+                color += gletters[Math.round(Math.random() * 5 + 1)];
+            } //ends for loop 
+            for (var i = 0; i < 2; i++) {
+                color += letters[Math.round(Math.random() * 10) + 5];
+            } //ends for loop 
+            return color;
+
+
+
+
+
+        } // ends getRandomColor Function
+
+        function randomSize() {
+            var width = Math.random();
+            width = width * 200 + 100;
+            return width;
+        }
+        function randomH() {
+            var height = Math.random();
+            height = height * 200 + 100;
+            return height;
+        }
+
+        var clickedTime; var createdTime; var reactionTime;
+
+        function makeBox() {
+            var time = Math.random();
+            time = time * 100;
+
+            setTimeout(function () {
+
+                if (Math.random() > 0.7) {
+
+                    document.getElementById("box").style.borderRadius = "100px";
+
+                } else if (Math.random() > 0.4) {
+                    document.getElementById("box").style.borderRadius = "2em";
+
+                } else {
+                    document.getElementById("box").style.borderRadius = "0";
+                }
+
+                var top = Math.random();
+                top = top * 350;
+                var left = Math.random();
+                left = left * 1380;
+
+                document.getElementById("box").style.top = top + "px";
+                document.getElementById("box").style.left = left + "px";
+                document.getElementById("box").style.backgroundColor = getRandomColor();
+                document.getElementById("box").style.width = randomSize() + "px";
+                document.getElementById("box").style.height = randomH() + "px";
+                document.getElementById("box").style.display = "block";
+
+                createdTime = Date.now();
+
+            }, time);
+
+        }
+        let score = 0;
+        document.getElementById("box").onclick = function () {
+
+            clickedTime = Date.now();
+            reactionTime = (clickedTime - createdTime) / 1000;
+            reactionTime = reactionTime.toFixed(2);
+            document.getElementById("printReactionTime").innerHTML = reactionTime + "seconds";
+
+            if (reactionTime > 0.9) {
+                score = 0;
+                document.getElementById("score").innerHTML = score;
+            } else if (reactionTime <= 1.1) {
+                score += 1;
+                document.getElementById("score").innerHTML = score;
+            }
+
+            this.style.display = "none";
+
+            makeBox();
+
+
+        }
+
+        makeBox();
+
+
+
+
+
+        var count = 9;
+
+        var counter = setInterval(timer, 1000); //1000 will  run it every 1 second
+        function timer() {
+            count = count - 1;
+
+            if (count <= 0) {
+                clearInterval(counter);
+                document.getElementById("hide").style.display = "block";
+                if (score >= 10) {
+                    document.getElementById("10").innerHTML = score;
+                    document.getElementById("puthere").innerHTML = "are not";
+                    document.getElementById("cong").innerHTML = "Congrats!"
+                } else if (score < 10) {
+                    document.getElementById("10").innerHTML = score;
+                    document.getElementById("puthere").innerHTML = "are";
+                    document.getElementById("cong").innerHTML = "L<br>";
+                }
+            }
+
+            document.getElementById("timer").innerHTML = count + "..."; // watch for spelling
+        }
+    </script>
+</body>
+
+</html>

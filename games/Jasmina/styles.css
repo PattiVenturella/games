@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Karla:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    background-color: #faf9f4;
+    text-align: center;
+    color: #031d44;
+}
+img[alt="blitzlogo"] {
+    width: 10%;
+}
+.button {
+    border: 3px solid #a8c8ca;
+    width: 10%;
+    vertical-align: middle;
+    border-radius: 0.5em;
+    margin: 0 auto;
+    transition: all 0.3s ease-in-out;
+    height: 3.5em;
+}
+.button:hover {
+    width: 10%;
+    height: 3.5em;
+    background-color: #a8c8ca;
+}
+.button p {
+    transition: all 0.2s ease-in-out;
+    font-weight: 500;
+}
+.button:hover p{
+    letter-spacing: 0.2em;
+}
+a {
+    color: #031d44;
+    text-decoration: none;
+}
+a:visited {
+    color: #031d44;
+    text-decoration: none;
+}
+a:link {
+    color: #031d44;
+    text-decoration: none;
+}

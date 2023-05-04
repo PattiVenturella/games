@@ -1,0 +1,56 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="rule.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon-16x16.png">
+
+    <title>Nummeral</title>
+</head>
+
+<body>
+    <script>
+        var imgObj = null;
+        var animate; //add
+        var animateTwo; //add
+
+        function init() {
+            imgObj = document.getElementById("background");
+            imgObj.style.position = "relative";
+            imgObj.style.left = "180px";
+        }
+        function moveRightH() {
+            window.location.href = "index.html";
+        }
+        </script>
+    <main>
+        <div id="background">
+            <header>
+                <img src="img/Logov2-removebg-preview.png" alt="" width="100px">
+                
+            </header>
+            <button onclick="moveRightH();">Home</button>
+            <h1>Rules and How to Play</h1>
+            <h2>1. Add a random number IN EACH box between 0-9 <br>of your choice to the 3 grey box</h2>
+            <h2>2.1 If a red box is shown then that mean you guess to high</h2>
+            <img src="img/Arrow_down-removebg-preview.png" alt="" width="50" class="imgs">
+            <h2>2.2 If a blue box is shown then that mean you guess to low</h2>
+            <img src="img/Arrow_up-removebg-preview.png" alt="" width="50" class="imgs1">
+            <h2>2.3 If the box with the question mark turn green and<br> show a number you got it right</h2>
+            <section id="greenBox"></section>
+            <span id="up">
+                <h2>3.Whatever number is in this box is the number of guess left</h2>
+            </span>
+            <section id="guessLeft"></section>
+            <h3>4. Final rule have fun</h3>
+
+    <img src="img/rules.png" alt="" id="rules">
+
+        </div>
+    </main>
+
+</body>
+
+</html>

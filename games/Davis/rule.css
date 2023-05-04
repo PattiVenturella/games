@@ -1,0 +1,125 @@
+/* <!-- DavisLy  4/27/23--> */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    max-width: 850px;
+    /*850*/
+    max-height: 5000px;
+
+}
+
+header {
+    text-align: center;
+}
+
+#background {
+    width: 1000px;
+    height: 1000px;
+    background-color: #8668baff;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+button {
+    transition-duration: 0.4s;
+    width: 150px;
+    height: 40px;
+    background-color: #ffffff;
+    border: none;
+    color: #fffcfc;
+    font-size: 1.95rem;
+    display: block;
+    margin: 12px auto;
+    background-color: #000000;
+}
+
+button:focus {
+    outline: none;
+}
+
+h1,
+h2 {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+body {
+    color: #ffffff;
+    text-align: center;
+}
+
+button:focus {
+    outline: none;
+}
+
+.home {
+    display: none;
+    width: 500px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -250px;
+}
+
+#home {
+    display: block;
+}
+
+header img {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-top: -40;
+}
+
+.imgs {
+    float: left;
+    position: relative;
+    top: -90;
+    left: 50;
+}
+
+.imgs1 {
+    float: right;
+    position: relative;
+    top: -100;
+    left: -50;
+}
+
+#greenBox {
+    width: 40px;
+    height: 50px;
+    border: green solid 3px;
+    position: relative;
+    top: -120;
+    left: 120;
+}
+
+#guessLeft {
+    width: 10%;
+    height: 5%;
+    position: relative;
+    top: -95;
+    left: 375;
+    border: #000000 solid 2px;
+    font-size: 40px;
+}
+
+#up {
+    position: relative;
+    top: -55;
+    left: 10;
+}
+
+#rules {
+    margin-top: -120;
+    width: 850px;
+}

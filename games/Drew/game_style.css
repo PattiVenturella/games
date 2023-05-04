@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+html {
+    background-color: rgb(159, 219, 159);
+}
+#game_over {
+    z-index: 10;
+    display: none;
+    width: 25%;
+    height: 25%;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 10px;
+    position: absolute;
+    top: 27%;
+    left: 37%;
+}
+#title {
+    font-size: 300%;
+}
+#score {
+    text-align: center;
+    user-select: none;
+}
+#job {
+    z-index: 3;
+    width: 100px;
+    image-rendering: pixelated;
+    position: absolute;
+    top: 30%;
+    left: 65%;
+    user-select: none;
+    animation: car 8s infinite linear;
+}
+#dog {
+    z-index: 2;
+    width: 100px;
+    image-rendering: pixelated;
+    position: absolute;
+    top: 30%;
+    left: 65%;
+    user-select: none;
+    animation: car 10s infinite linear;
+}
+#car {
+    z-index: 4;
+    width: 100px;
+    image-rendering: pixelated;
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    user-select: none;
+}
+#ready {
+    width: 35px;
+    image-rendering: pixelated;
+    position: absolute;
+    top: 30%;
+    left: 27%;
+}
+#not_ready {
+    width: 35px;
+    image-rendering: pixelated;
+    position: absolute;
+    top: 30%;
+    left: 27%;
+}
+@keyframes car {
+    0% {
+        left: 100%;
+    }
+
+    100% {
+        left: -20%;
+    }
+}

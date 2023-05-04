@@ -1,0 +1,77 @@
+<!-- DavisLy  4/27/23-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+    <title>Nummeral</title>
+</head>
+<script type="text/javascript" src="index.js"></script><!-- This allow the js to work -->
+
+<body onload="init();">
+
+    <div id="background">
+        <div class="finish" id="finish">
+            
+        <!--Home page-->
+        <header id="myhome">
+            <div class="home" id="home">
+                <img src="img/Logov2-removebg-preview.png" alt="" width="350">
+                <link rel="icon" type="image/x-icon" href="img/favicon-16x16.png">
+
+                <button onclick="moveRight();">Rules</button>
+                <button onclick="startG()">Click to start the game</button>
+
+            </div>
+            <div id="txt"></div>
+        </header>
+
+        <main>
+            <!-- boxes that they have to guess -->
+            <div id="boxes" class="hidden">
+                <section id="boxI"></section>
+                <section id="boxII"></section>
+                <section id="boxIII"></section>
+            </div>
+
+            <!-- The boxes that they have put in to guess -->
+            <div class="hidden">
+                <input type="text" id="boxIG" maxlength="1" required="required"
+                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');">
+                <input type="text" id="boxIIG" maxlength="1" required="required"
+                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');">
+                <input type="text" id="boxIIIG" maxlength="1" required="required"
+                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');">
+
+                <!-- submit arrows and score -->
+                <button id="submit" onclick="getData()">Submit</button>
+                <img src="img/Arrow_down-removebg-preview.png" alt="" id="down">
+                <img src="img/Arrow_up-removebg-preview.png" alt="" id="up">
+                <img src="img/Logov2-removebg-preview.png" alt="" width="200">
+                <div id="guessLeft"></div>
+                <p id="scoreboard">
+                    <span id="playerScore"></span>
+                </p>
+
+            </div>
+        </main>
+    </div>
+
+
+        <footer class="finishP2">
+                <!-- finish section -->
+            
+                <section id="lose/win"></section>
+                <section id="FboxI"></section>
+                <section id="FboxII"></section>
+                <section id="FboxIII"></section>
+                
+                <button onclick="restart()">Click to start the game again</button>
+            </footer>
+</body>
+</div>
+
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head><!--Add sound effects and music-->
+        <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>Spring Into Action!</title><!--So corny-->
+	<style><!--Change canvas-->
+		canvas {
+			border:1px solid #d3d3d3;
+			background-color: #f1f1f1;
+		}
+	</style>
+	</head>
+
+<body onclick="startGame()">
+
+<script>
+
+var myGamePiece;
+var myBackground;
+var myObstacle = [];
+
+function startGame() {
+    myGamePiece = new component(40, 100, "img/Player.2.png", 1, 700, "image");/*Make img bigger to see text*/
+    myBackground = new component(700, 700, "img/Background3.jpg", 0, 0, "image");/*Change background maybe*/
+	    /*myObstacle  = new component(700, 150, "brown", 0, -145);*/
+	myObstacle = new component(40, 100, "img/OBS4.5.png", 400, 600, "image");
+    myGameArea.start();
+}
+
+var myGameArea = {
+    canvas : document.createElement("canvas"),
+    start : function() {
+        this.canvas.width = 700;
+        this.canvas.height = 700;
+        this.context = this.canvas.getContext("2d");
+        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+        this.frameNo = 0;
+        this.interval = setInterval(updateGameArea, 20);
+         window.addEventListener('keydown', function (e) {
+            myGameArea.key = e.keyCode;
+        })
+		  window.addEventListener('keyup', function (e) {
+            myGameArea.key = false;
+        })
+		},
+    clear : function() {
+        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    },
+    stop : function() {
+        clearInterval(this.interval);
+    }
+}
+
+function component(width, height, color, x, y, type) {
+    this.type = type;
+    if (type == "image") {
+        this.image = new Image();
+        this.image.src = color;
+    }
+    this.width = width;
+    this.height = height;
+    this.speedX = 0;
+    this.speedY = 0;    
+    this.x = x;
+    this.y = y;   
+	this.speedX = 0;
+    this.speedY = 0;    
+    this.gravity = 0.1;
+    this.gravitySpeed = 0;
+    this.bounce = 1;
+    this.update = function() {
+        ctx = myGameArea.context;
+        if (type == "image") {
+            ctx.drawImage(this.image, 
+                this.x, 
+                this.y,
+                this.width, this.height);
+       
+        
+        } else {
+            ctx.fillStyle = color;
+            ctx.fillRect(this.x, this.y, this.width, this.height);
+        }
+	
+    }
+	
+     this.newPos = function() {
+        this.gravitySpeed += this.gravity;
+        this.x += this.speedX;
+        this.y += this.speedY + this.gravitySpeed;
+        this.hitBottom();
+    }
+	
+	this.hitBottom = function() {
+        var rockbottom = myGameArea.canvas.height - this.height;
+        if (this.y > rockbottom) {
+            this.y = rockbottom;
+            this.gravitySpeed = -(this.gravitySpeed * this.bounce);
+        }
+    }
+	
+	this.crashWith = function(otherobj) {
+        var myleft = this.x;
+        var myright = this.x + (this.width);
+        var mytop = this.y;
+        var mybottom = this.y + (this.height);
+        var otherleft = otherobj.x;
+        var otherright = otherobj.x + (otherobj.width);
+        var othertop = otherobj.y;
+        var otherbottom = otherobj.y + (otherobj.height);
+        var crash = true;
+        if ((mybottom < othertop) || (mytop > otherbottom) || (myright < otherleft) || (myleft > otherright)) {
+            crash = false;
+        }
+        return crash;
+    }
+	
+ }
+
+function updateGameArea() {
+	if (myGamePiece.crashWith(myObstacle)) {
+        myGameArea.stop();
+    } else {
+    myGameArea.clear();
+	 myObstacle.x -= 1;
+	 myGamePiece.speedX = 0;
+    myGamePiece.speedY = 0;    
+    if (myGameArea.key && myGameArea.key == 37) {myGamePiece.speedX = -1; }
+    if (myGameArea.key && myGameArea.key == 39) {myGamePiece.speedX = 1; }
+    if (myGameArea.key && myGameArea.key == 38) {myGamePiece.speedY = -1; }
+    if (myGameArea.key && myGameArea.key == 40) {myGamePiece.speedY = 1; }
+    myBackground.newPos();    
+    myBackground.update();
+	myObstacle.update();
+    myGamePiece.newPos();    
+    myGamePiece.update();
+}
+}
+
+
+function move(dir) {
+    myGamePiece.image.src = "img/pixil-frame-0.png";
+    if (dir == "up") {myGamePiece.speedY = -1; }
+  
+}
+function moveleft() {
+    myGamePiece.speedX = -1; 
+}
+function moveright() {
+    myGamePiece.speedX = 1; 
+}
+
+function clearmove() {
+    myGamePiece.image.src = "img/Player.png";
+    myGamePiece.speedX = 0; 
+    myGamePiece.speedY = 0; 
+}
+</script>
+<div style="text-align:center;width:480px;">
+  <button onmousedown="move('up')" onmouseup="clearmove()" ontouchstart="move('up')">START</button>
+    
+</div>
+<header>
+	<h1>Spring Into Action!</h1>
+	<h2>Rise of the Rust</h2>
+	<hr>
+	<h1>Instructions</h1>
+	<ul><!--Work on layout-->
+		<li>Press the UP ARROW to jump over the RUSTED springs</li>
+		<li>Hold the LEFT or RIGHT ARROWS to MOVE left or right</li>
+		<li>Survive as long as you can</li>
+	</ul>
+</header>
+
+</body>
+</html>

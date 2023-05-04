@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kermit Guessing Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script>
+        //document.getElementById("click1").addEventListener("click", play);
+       // document.getElementById("click2").addEventListener("click", play);
+       // document.getElementById("click3").addEventListener("click", play);
+
+
+function play(kermit1) {
+   
+    let number1 =  Math.floor(Math.random() * 5) + 1;
+    let number2 =  Math.floor(Math.random() * 5) + 1;
+    let number3 =  Math.floor(Math.random() * 5) + 1;
+    if(kermit1 == document.getElementById("click1")) {
+        if (number1==number2 || number1 == number3) {
+            alert("Numbers where the same game will restart!");
+            window.open("index.html");
+            window.close();
+        }
+        if(number1> number2 && number1 > number3){
+            //alert("Congrats you win! The number was " + number1)
+            document.getElementById("output").innerHTML="Congrats you win! The number was " + number1 + " The other numbers where " + number2 + " and " + number3;
+        } else {
+            document.getElementById("output").innerHTML="You Lost! The number was " + number1 + " The other numbers where " + number2 + " and " + number3;
+        }
+    } else if(kermit1 == document.getElementById("click2")) {
+        if (number2==number1 || number2 == number3) {
+            alert("Numbers where the same game will restart!");
+            window.open("index.html");
+            window.close();
+        }
+        if(number2> number1 && number2 > number3){
+        document.getElementById("output").innerHTML="Congrats you win! The number was " + number2 + " The other numbers where " + number1 + " and " + number3;
+        } else {
+            document.getElementById("output").innerHTML="You Lost! The number was " + number2 + " The other numbers where " + number1 + " and " + number3;
+        }
+    }else if(kermit1 == document.getElementById("click3")){
+        if (number3==number2 || number3 == number1) {
+            alert("Numbers where the same game will restart!");
+            window.open("index.html");
+            window.close();
+        }
+        if(number3> number1 && number3 > number2){
+            document.getElementById("output").innerHTML="Congrats you win! The number was " + number3 + " The other numbers where " + number1 + " and " + number2;
+        } else {
+            document.getElementById("output").innerHTML="You Lost! The number was " + number3 + " The other numbers where " + number1 + " and " + number2;
+        }
+       
+    }
+}
+   /* if(kermit1 == document.getElementById("click1")) {
+        num1.innerHTML= number;
+    } else if(kermit1 == document.getElementById("click2")) {
+        num2.innerHTML= number;
+    } else{
+        num3.innerHTML=number;
+    }*/   
+
+
+function reset() {
+    document.getElementById("output").innerHTML="";
+}
+
+
+    </script>
+    <style>
+    head {
+        margin-left: 50%;
+    }
+.restart {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+html {
+    background-image: linear-gradient(white, rgb(73, 163, 73) );
+    object-fit: cover;
+
+
+}
+* {
+    font-family: "Poppins", sans-serif;
+}
+aside{
+    position: relative;
+    border: solid green 5px; 
+    float: right;
+    bottom: 15em;
+    right: 15em;
+    padding: 20px;
+ }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Kermits Guessing Game</h1>
+    <p>Pick from the Kermits to see if you can get the highest number</p>
+    <head>
+<button type="submit" onclick="play(this)" id="click1">
+    <img src="Imgs/Kermit.png">
+</button>
+
+<button type="submit" onclick="play(this)" id="click2">
+    <img src="Imgs/Kermit.png">
+</button>
+<button type="submit" onclick="play(this)" id="click3">
+    <img src="Imgs/Kermit.png">
+</button>
+</head>
+
+
+
+
+<div id="num1" class="box"></div>
+<div id="num2" class="box"></div>
+<div id="num3" class="box"></div>
+
+<p id="output"></p>
+<button type="reset" onclick="reset()" class="restart">Restart!</button>
+
+<aside>
+    <h2>Rules</h2>
+    <p>Click on the kermits to get to guess the highest number!</p><br>
+    <p>You only get 1 guess each time so pick wisely!</p><br>
+    <p>If you get it wrong dont worry!</p><br>
+    <p>Click Restart in order to start again!</p>
+    <img src="Imgs/kermit1.png">
+</aside>
+</body>
+</html>

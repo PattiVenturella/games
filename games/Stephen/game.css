@@ -1,0 +1,36 @@
+#menu {
+    border:2px black solid;
+    width:25%;
+    margin:0 auto;
+    text-align:center;
+    display:none;
+    position: absolute;
+    top: 30%;
+    left:35%;
+    padding-bottom:1%;
+    background-color: white;
+}
+.menuButton {
+    width:40%;
+    margin-bottom:2%;
+    font-size:150%;
+    position: relative;
+}
+div > h1 {
+    font-size:250%;
+}
+html{
+    background-image:linear-gradient(#ccf9ff,#7ce8ff,#55d0ff,#00acdf,#0080bf,#00008b, #1f1fff);
+    object-fit: cover;
+    height:100%;
+}
+#start{
+    height:5%;
+    width:20%;
+    padding:2%;
+    font-size:2em;
+    margin:0 auto;
+    position:relative;
+    left:40%;
+    bottom:40%;
+}

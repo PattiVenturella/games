@@ -1,0 +1,40 @@
+.homeButton {
+    margin:0 auto;
+    width:50%;
+    padding:2%;
+    margin-left:5%;
+    margin-bottom:3%;
+    font-size:200%;
+    text-align:center;
+}
+h1{
+    font-size:450%;
+    color:white;
+    font-family:Arial;
+}
+h2 {
+    margin-top:0;
+    color:white;
+    font-family:Arial;
+}
+.buttons {
+    width:25%;
+    text-align:center;
+    margin:0 auto;
+    top: 40%;
+    left:35%;
+}
+html {
+    background-image:url("img/steven.gif");
+    background-repeat:cover;
+    background-size: cover;
+    
+}
+#rules{
+    position:relative;
+    left:37%;
+    border:2px black solid;
+    width:25%;
+    background-color:white;
+    text-align:center;
+}

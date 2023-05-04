@@ -1,0 +1,241 @@
+/* <!-- DavisLy  4/27/23--> */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    max-width: 850px;
+    /*850 half 425 quarter 213*/
+    max-height: 750px;
+    /*750 half is 375 quarter 213*/
+}
+
+header {
+    text-align: center;
+}
+
+#background {
+    width: 1000px;
+    height: 1000px;
+    background-color: #8668baff;
+    margin: 20px;
+}
+
+
+button {
+    transition-duration: 0.4s;
+    width: 260px;
+    height: 36px;
+    background-color: #ffffff;
+    border: none;
+    color: #fffcfc;
+    font-size: 0.95rem;
+    display: block;
+    margin: 12px auto;
+    background-color: #000000;
+}
+
+header button:hover {
+    font-size: 150%;
+    width: 300px;
+    height: 45px;
+    cursor: pointer;
+}
+
+header button:active,
+header button:hover {
+    transition-duration: 0.45s;
+    outline: none;
+    background-color: #dddddd;
+    color: #000000;
+}
+
+button:focus {
+    outline: none;
+}
+
+h1,
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+body {
+    color: #ffffff;
+    text-align: center;
+}
+
+
+button:focus {
+    outline: none;
+}
+
+.home {
+    display: none;
+    width: 500px;
+    height: 200px;
+    position: absolute;
+    top: 25%;
+    left: 51%;
+    margin-top: -100px;
+    margin-left: -250px;
+}
+
+#home {
+    display: block;
+}
+
+header {
+    left: 180;
+    top: 250;
+    width: 450px;
+    height: 300px;
+    position: absolute;
+}
+
+header img {
+    margin-top: -25px;
+}
+
+
+/* 3 box for the ran numbers */
+#boxI {
+    border: #000000 solid 5px;
+    width: 120px;
+    height: 150px;
+    position: absolute;
+    top: 200;
+    left: 180;
+    font-size: 125px;
+}
+
+#boxII {
+    border: #000000 solid 5px;
+    width: 120px;
+    height: 150px;
+    position: absolute;
+    top: 200;
+    left: 380;
+    font-size: 125px;
+}
+
+#boxIII {
+    border: #000000 solid 5px;
+    width: 120px;
+    height: 150px;
+    position: absolute;
+    top: 200;
+    left: 580;
+    font-size: 125px;
+}
+
+/* guess box */
+#boxIG {
+    border: #000000 solid 2px;
+    width: 35px;
+    height: 50px;
+    position: absolute;
+    top: 600;
+    left: 225;
+    font-size: 50px;
+}
+
+#boxIIG {
+    border: #000000 solid 3px;
+    width: 35px;
+    height: 50px;
+    position: absolute;
+    top: 600;
+    left: 425;
+    font-size: 50px;
+}
+
+#boxIIIG {
+    border: #000000 solid 3px;
+    width: 35px;
+    height: 50px;
+    position: absolute;
+    top: 600;
+    left: 625;
+    font-size: 50px;
+}
+
+.hidden {
+    display: none;
+}
+
+#submit {
+    border: #000000 solid 3px;
+    width: 190px;
+    height: 55px;
+    position: absolute;
+    top: 500;
+    left: 350;
+    font-size: 35px;
+
+}
+
+#down {
+    float: left;
+}
+
+#up {
+    float: right;
+}
+
+
+/* css for guess remaining */
+#guessLeft  {
+    width: 25%;
+    height: 10%;
+    position: relative;
+    top: 225;
+    left: 318;
+    border:#000000 solid 2px;
+    font-size:40px;
+}
+span{
+    font-size: 75px;
+    position: relative;
+    top: 141;
+    left: 2;
+
+}
+
+/* this is for the finish section */
+.finishP2 {
+    display: none;
+}
+
+#FboxI {
+    border: #008000 solid 5px;
+    width: 120px;
+    height: 150px;
+    position: absolute;
+    top: 280;
+    left: 160;
+    font-size: 125px;
+}
+
+#FboxII {
+    border: #008000 solid 5px;
+    width: 120px;
+    height: 150px;
+    position: absolute;
+    top: 280;
+    left: 360;
+    font-size: 125px;
+}
+
+#FboxIII {
+    border: #008000 solid 5px;
+    width: 120px;
+    height: 150px;
+    position: absolute;
+    top: 280;
+    left: 560;
+    font-size: 125px;
+}

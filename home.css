@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/sports-world');
 @font-face {
     font-family: Age;
     src: local("Age Normal"), local("Age-Normal"),
@@ -45,6 +47,11 @@ h1, h2{
 .card p{
     margin: 0;
     font-size: 24pt;
+}
+
+.card sub{
+    margin: 0;
+    font-size: 18pt;
 }
 
 .card div{
@@ -129,5 +136,19 @@ h1, h2{
     right: -2.5%;
     bottom: 60%;
     box-shadow: 0 0 15px #fff;
+}
 
+#blitz{
+    background-color: #a8c8ca;
+    font-family: Nunito, sans-serif;
+    border: 2px solid #fff;
+}
+
+#blitz cite{
+    color: white;
+    font-family: Nunito, sans-serif;
+}
+
+#nummeral{
+    font-family: "Sports World", serif;
 }

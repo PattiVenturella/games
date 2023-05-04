@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        #bruh {
+            display: none;
+            border: 5px solid #a8c8ca;
+        }
+        body {
+            font-size: 20pt;
+        }
+
+        #opt {
+            cursor: help;
+        }
+
+        #bruh {
+            display: none;
+            border: 5px solid #031d44;
+            background-color: #faf9f4;
+            font-size: 17pt;
+            text-align: center;
+            width: 40%;
+            height: 20%;
+            /* top: 30%; */
+            /* padding: 5%;
+            position: fixed;
+            left: 25%; */
+            position: relative;
+            bottom: 5em;
+            padding: 1em;
+            margin: 0 auto;
+        }
+
+        #float {
+            float: right;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="img/logo.png" alt="blitzlogo">
+    <h1>Blitz</h1>
+    <p>test if you're a loser</p>
+
+    <a href="test.html">
+        <div class="button">
+            <p>Start</p>
+        </div>
+    </a>
+    <br>
+    <div id="bruh">
+        <a onclick="mhh()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#031d44" class="bi bi-x"
+                viewBox="0 0 16 16" id="float">
+                <path
+                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+        </a>
+
+        <p>Rules
+        </p>
+        <ol>
+            <li>Click on the shapes as fast as possible. Your reaction time will be displayed at the top.</li>
+            <li>If you react in less than 0.9 seconds, you score a point.</li>
+            <li>If you react slower, your score is set to zero(0).</li>
+            <li>You have 9 seconds to score ten points.</li>
+        </ol>
+    </div>
+    <a onclick="showMe()" id="opt">
+        <svg title="Options" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50"
+            viewBox="0,0,256,256" style="fill:#000000;">
+            <g fill="#a8c8ca" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                style="mix-blend-mode: normal">
+                <g transform="scale(5.12,5.12)">
+                    <path
+                        d="M25,2c-12.6907,0 -23,10.3093 -23,23c0,12.69071 10.3093,23 23,23c12.69071,0 23,-10.30929 23,-23c0,-12.6907 -10.30929,-23 -23,-23zM25,4c11.60982,0 21,9.39018 21,21c0,11.60982 -9.39018,21 -21,21c-11.60982,0 -21,-9.39018 -21,-21c0,-11.60982 9.39018,-21 21,-21zM25,11c-1.65685,0 -3,1.34315 -3,3c0,1.65685 1.34315,3 3,3c1.65685,0 3,-1.34315 3,-3c0,-1.65685 -1.34315,-3 -3,-3zM21,21v2h1h1v13h-1h-1v2h1h1h4h1h1v-2h-1h-1v-15h-1h-4z">
+                    </path>
+                </g>
+            </g>
+        </svg>
+    </a>
+
+
+
+
+
+
+    <script>
+        function showMe() {
+            document.getElementById("bruh").style.display = "block";
+        }
+        function mhh() {
+            document.getElementById("bruh").style.display = "none";
+        }
+    </script>
+
+</body>
+
+
+</html>

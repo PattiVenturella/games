@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+   
+}
+
+
+@-webkit-keyframes blinker {
+  from { opacity: 1.0; }
+  to { opacity: 0.0; }
+}
+
+.blink {
+  -webkit-animation-name: blinker;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(.5, 0, 1, 1);
+  -webkit-animation-duration: .65s;
+}
+
+p {
+    
+    text-align: center;
+    font-size: 2em;
+    color: white;
+    position: relative;
+    top: 350px
+}
+
+body {
+    background-color: black;
+   min-height:80em;
+   overflow: hidden;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+  color: white;
+  position: relative;
+  top: 250px
+}

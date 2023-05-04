@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        body {
+            background: url("img/output-onlinegiftools.gif");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: scroll;
+        }
+
+        #letter {
+            margin-top: 50% auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="letter"></h1>
+    <p id="alert"></p>
+    <script>
+        var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
+            'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+
+        var computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
+
+        document.getElementById("letter").innerHTML = computerChoice;
+
+
+        document.onkeypress = function (event) {
+            var userGuess = event.key;
+            document.getElementById("letter").innerHTML = computerChoice;
+            if (userGuess === computerChoice) {
+                window
+                document.getElementById("alert").innerHTML = "Wow! Very Quick!";
+                guessagain();
+                document.getElementById("letter").innerHTML = computerChoice;
+            } else {
+                guessagain();
+                document.getElementById("letter").innerHTML = "Try again.";
+            }
+
+        }
+
+        for (i = 0; i > 0; i++) {
+            guessagain();
+        }
+
+        function guessagain() {
+            var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
+                'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+            var computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
+
+
+        }
+
+    </script>
+</body>
+
+</html>

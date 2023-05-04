@@ -1,0 +1,37 @@
+<!--Code by Nico Rugani. 
+    started on 4/3/23-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/main.css">
+    <title>Play</title>
+</head>
+<body>
+   
+    <div id="menu" style="display:none; "><!--Idea given by the incomprable, incredible, sexy, stinky stephen talcou-->
+        <h1>GUESS!!!... THAT!!! NUMBER!!!</h1>
+        <br>
+        <button onclick="rules()" class="menuButton">How to play</button><!--Each Button fires off a link function-->
+        <br>
+        <button onclick="goBack()" class="menuButton">Back To Home</button>
+        <br>
+        <button onclick="exit()" class="menuButton">Exit Game</button>
+    </div>
+
+    <h2>Enter a number 2-12!</h2>
+    <h2 id="result"></h2><!--Where the result gets printed-->
+    <input type="text" id="guess" name="guess"><br><br>
+
+    <button type="submit" value="submit" onclick="roll()">GUESS!!</button>
+    <button onClick="window.location.reload();">Play Again</button><!--Reloads page without having to press the reload button up top-->
+        <p>Press Escape for menu</p>
+    <div id="party"></div>
+
+    
+
+    <script src="../javascript/main.js"></script>
+</body>
+</html>

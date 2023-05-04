@@ -1,0 +1,41 @@
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    z-index: 1;
+    background-image: linear-gradient(to bottom right, blue, pink);/*diagonal gradient*/
+    height:100%;
+    color:white;
+}
+
+input{
+    font-size: 150%;/*box to enter number*/
+    width:5%;
+}
+button{
+    font-size: 150%;
+}
+
+#menu{ /*styles for the menu*/
+    margin-left:36%;
+    margin-top:10%;
+    padding:20px;
+    border:2px solid black;
+    width:500px;
+    z-index: 2;
+    background-image: linear-gradient(#9482c7, lightblue, pink);
+    color:black
+}
+
+#menu button{
+    margin-top:4%;
+    width:500px;
+    height:60px;
+}
+
+button{/*all buttons*/
+    width:300px;
+    height:60px;
+    box-shadow: 5px 6px 5px 2px black;
+    background-color:white
+}
+
