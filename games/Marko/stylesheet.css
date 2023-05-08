@@ -1,6 +1,6 @@
 @font-face {
   font-family: "customFont";
-  src: url(minecraft-font/MinecraftRegular-Bmg3.otf);
+  src: url(../../fonts/MinecraftRegular-Bmg3.otf);
 }
 html {
   font-family: 'customFont', arial, sans-serif;

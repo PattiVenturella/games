@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap');
-@import url('https://fonts.cdnfonts.com/css/sports-world');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@font-face{
+    font-family:sports world;
+    font-style:normal;
+    font-weight:400;
+    src: local('Sports World'),
+        url('fonts/Sports-World-Regular.otf') format('OpenType')}
 @font-face {
     font-family: Age;
     src: local("Age Normal"), local("Age-Normal"),
@@ -11,6 +17,10 @@
         url("/fonts/Age/Age-Normal.otf") format(OpenType),
         url("/fonts/Age/Age-Normal.tff") format(OpenType);
 }
+@font-face {
+    font-family: "Minecraft";
+    src: local("Minecraft"), local("Minecraft Font"), url(fonts/MinecraftRegular-Bmg3.otf);
+  }
 
 body{
     font-family: Cinzel, 'Times New Roman', Times, serif;
@@ -36,12 +46,12 @@ h1, h2{
 .card{
     border: 2px solid rgb(22, 22, 22);
     position: relative;
+    padding: 1em;
     padding-bottom: 3.5em;
 }
 
 .card img{
-    max-width: calc(100% - 2em);
-    margin: 1em;
+    width: 100%;
 }
 
 .card p{
@@ -139,7 +149,7 @@ h1, h2{
 }
 
 #blitz{
-    background-color: #a8c8ca;
+    background-color: #8fcbcf;
     font-family: Nunito, sans-serif;
     border: 2px solid #fff;
 }
@@ -151,4 +161,62 @@ h1, h2{
 
 #nummeral{
     font-family: "Sports World", serif;
+    background-color: #6b4f9b;
+    border-color: #8668ba;
+}
+
+#pje{
+    background-color: #756b90;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#adventure{
+    background-color: #8b8000;
+    border-color: #fff;
+}
+
+#mail{
+    font-family: 'Poppins', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #b2eeb2;
+    color: black;
+    border-color: #9fdb9f;
+}
+
+#mail cite{
+    color: black;
+    opacity: 0.6;
+}
+
+#kermit{
+    font-family: 'Poppins', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #679b3b;
+    border-color: #8abe3e;
+}
+
+#minecraft{
+    font-family: "Minecraft", monospace;
+    background-color: #7f7f7f;
+    border-color: #5deaf4;
+}
+
+#breakout{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #3f3f3f;
+    border-color: #add8e6;
+}
+
+#breakout sub{
+    display: block;
+}
+
+#gtn{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(52, 50, 190);
+    border-color: #a57cdc;
+}
+
+#lucky{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #083e74;
+    border-color: #00a9cb;
 }
