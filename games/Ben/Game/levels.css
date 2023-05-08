@@ -1,0 +1,35 @@
+html {
+    background-color: #686484;
+        background-image: url(img/spin.gif);
+        background-repeat: no-repeat;
+        background-size: cover;
+}
+p {
+    font-size: larger;
+}
+button {
+    width: 25%;
+    height: 100px;
+    color: rgb(24, 35, 133);
+    background-color: rgba(211, 149, 34, 0.849);
+    border-radius: 1em;
+    border-color: darkslategray;
+    justify-content: center;
+    margin: auto;
+    font-size: 2em;
+    float: left;
+    margin: 2em;
+    transition: transform .2s;
+}
+body {
+    padding: 2em;
+  }
+  button:hover {
+    transform: scale(1.5);
+  }
+  h1 {
+    text-align: center;
+    font-size: 75px;
+  }
+
+  

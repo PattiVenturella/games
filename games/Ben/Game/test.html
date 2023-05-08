@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker</title>
+    <style>
+        .sectionLeft{
+            float: left;
+            width: 80%;
+        }
+        .sectionRight {
+            float: right;
+            width: 20%;
+        }
+        .scoreContainer{
+            color: rgb (211, 149, 34, 0.849);
+            width: 50%;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .clickerContainer img {
+            postion: relative;
+            transition: all .2s;
+        }
+        .clickerContainer img:hover {transform: scale(1.10);}
+        .clickerContainer img:active {transform: scale(0.99);}
+
+        .shopButton {
+            background-color: #b5b5b5;
+            transition: all .2s;
+            border-radius: 10px;
+            width: 100%;
+            margin: 10px, 0px, 10px, 0px;
+        }
+
+        .shopButton:hover {
+            background-color: #c7c7c7;
+            transition: all .2s;
+        }
+        .shopButton #image {
+            width: 25%;
+
+        }
+
+        .shopButton img {
+            height: 128px;
+            width: 64px;
+        }
+        .shopButton #nameAndCost p{
+            margin: 0px;
+            width 60px;
+
+        }
+        .shop button #nameAndCost p:first-of-type{
+            font-size: 24px;
+        }
+        .shopButton #amount {
+            font-size: 48px;
+            color: #595959 ;
+            font-family: roboto;
+            width: 15%
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="sectionLeft">
+    <center>
+    <div class="scoreContainer">
+        <span id="score">0</span> tires<br>
+        <span id="scorepersecond">0</span> tires per second
+    </div>
+    <br>
+    <div class="clickerContainer">
+        <img src="img/tire.png" height="256" width="256" onclick="addToScore(clickingPower)">
+    </div>
+</center>
+</div>
+<div class="sectionRight">
+    <table class="shopButton" onclick="buyCursor()">
+    <tr>
+        <td id="image"><img src="img/sport.png"></td>
+        <td id="nameAndCost">
+            <p>Sports Car</p>
+            <p><span id=cursorcost>15</span></p>
+        </td>
+        <td id="amount"><span id=cursors>0</span></td>
+    </tr>
+    </table>
+    <table class="shopButton" onclick="buyGrandma()">
+        <tr>
+            <td id="image"><img src="img/fancy.png"></td>
+            <td id="nameAndCost">
+                <p>Fancy Car</p>
+                <p><span id=fancycost>15</span></p>
+            </td>
+            <td id="amount"><span id=grandma>0</span></td>
+        </tr>
+        </table>
+</div>
+   
+    <script>
+        var score = 0
+        var clickingPower = 1;
+
+        var cursorCost = 15;
+        var cursors = 0; 
+        var grandmaCost = 100;
+        var grandmas = 0
+
+        function buyCursor() { 
+            if (score >= cursorCost) {
+                score = score - cursorCpst;
+                cursors = cursors + 1;
+                cursorCost = Math.counrd(cursorCost * 1.15);
+
+                document.getElementById("score").innerHTML = score;
+                document.getElementById("cursorecost").innerHTML = cursorCost;
+                document.getElementById("cursors").innerHTML = cursores;
+            }
+        }
+        function buyGrandma() { 
+            if (score >= grandmaCost) {
+                score = score - grandmaCost;
+                grandmas = grandmas + 1;
+                grandmaCost = Math.counrd(grandmaCost * 1.15);
+
+                document.getElementById("score").innerHTML = score;
+                document.getElementById("grandmacost").innerHTML = cursorCost;
+                document.getElementById("grandmas").innerHTML = cursores;
+            }
+        }
+        function addToScore (amount) {
+            score = score + amount; 
+            document.getElementById("score").innerHTML = score;
+        }
+
+        function updateScorePerSecond(){
+            scorePerSecond = cursors + grandmas * 5;
+            document.getElementById("scorepersecond").innerHTML = scorePerSecond;
+        }
+        setInterval (function() {
+            score = score + cursors; 
+            score = score + grandmas * 5;
+            document.getElementById("score").innerHTML = score;
+        }, 1000); //1000ms per sec
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="level one.css">
+    
+
+    <title>Level One</title>
+</head>
+<body>
+    
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <script>
+        var money = 0;
+        var popoCost = 15;
+        var popo = 0;
+        var luxeryCost = 125;
+        var luxery = 0;
+        var sportCost = 500;
+
+        function buyPopo() {
+            score = score - popoCost;
+            popo = popo + 1;
+            popoCost = Math.round(popoCost * 1.15);
+
+            document.getElementById("score").innerHTML = score;
+            document.getElementById("popocost").innerHTML = popoCost;
+            document.getElememtById("popo").innerHTML = popo;
+        }
+        function buyLuxery() {
+            score = score - luxeryCost;
+            luxery = luxery + 100;
+            popoCost = Math.round(luxeryCost * 1.15);
+
+            document.getElementById("score").innerHTML = score;
+            document.getElementById("luxurycost").innerHTML = luxeryCost;
+            document.getElememtById("luxury").innerHTML = luxery;
+        }
+        function buySport() {
+            score = score - sportCost;
+            sport = sport + 50;
+            sportCost = Math.round(sportCost * 1.15);
+
+            document.getElementById("score").innerHTML = score;
+            document.getElementById("sportcost").innerHTML = sportCost;
+            document.getElememtById("sport").innerHTML = sport;
+        }
+        function addToScore(amount) {
+            score = score + amount;
+            document.getElementById("score").innerHTML = score;
+        }
+            
+    </script>
+<p>Score: <span id="score">0</span></p>
+<img scr="buyPart()">Cursor [<span id="carpartcost">15</span>] -- <span id="car">0</span></button>
+<div>
+    <img src="img/tire.png" alt="car" width="400em" script="onclick= myFunction (score "value "1")>
+</div>
+    <form action="Title.html">
+        <button>Back</button>
+        <button>Upgrades</button>
+        <button>Help</button>
+    </form>
+    <script src="one.js"></script>
+</body>
+</html>

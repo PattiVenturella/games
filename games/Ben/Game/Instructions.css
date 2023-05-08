@@ -1,0 +1,35 @@
+html {
+    background-color: #686484;
+        background-image: url(img/spin.gif);
+        background-repeat: no-repeat;
+        background-size: cover;
+}
+h3 {
+    font-size: larger;
+    text-align: left;
+    font-weight: bold;
+}
+button {
+    width: 15em;
+    height: 40px;
+    color: rgb(24, 35, 133);
+    background-color: rgba(211, 149, 34, 0.849);
+    border-radius: 1em;
+    border-color: darkslategray;
+  justify-content: center;
+  margin: auto;
+}
+body {
+    padding: 2em;
+  }
+  
+  button {
+    transition: transform .2s;
+  }
+  
+  button:hover {
+    transform: scale(1.5);
+  }
+  .gif{
+    border-radius: 2em;
+  }

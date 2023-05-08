@@ -1,0 +1,18 @@
+html {
+    background-color: #666287;
+}
+button {
+    width: 15em;
+    height: 40px;
+    color: rgb(24, 35, 133);
+    background-color: rgba(211, 149, 34, 0.849);
+    border-radius: 1em;
+    border-color: darkslategray;
+    justify-content: center;
+    margin: auto;
+    transition: transform .2s;
+    margin-left: 18em;
+}  
+  button:hover {
+    transform: scale(1.5);
+  }
